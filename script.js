@@ -55,10 +55,14 @@ function game () {
     for (i = playerScore, j = computerScore; i || j <3; i++, j++) {
         singleRound ();
         if (playerScore === 3) {
-            alert ("You reached 3 points, you WIN!")
+            alert ("You reached 3 points, you WIN! The game will now restart.")
+            playerScore = 0
+            computerScore = 0            
         }
         else if (computerScore === 3) {
-            alert ("The computer reached 3 points, you LOSE!")
+            alert ("The computer reached 3 points, you LOSE! The game will now restart.")
+            playerScore = 0
+            computerScore = 0      
         }
     }    
 }
